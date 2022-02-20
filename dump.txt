@@ -1,0 +1,10 @@
+Choose word
+Prepare set for allowed guesses
+Logic for game
+
+
+
+LOGIC
+GXGIY
+
+BBGGB

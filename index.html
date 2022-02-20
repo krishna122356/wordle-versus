@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SocketIO Upvote</title>
+	<style>
+		.container {
+			width: 80%;
+			margin: 1rem auto;
+		}
+		
+		.text-justify {
+			text-align: justify;
+		}
+	</style>
+</head>
+
+<body>
+	<button onclick="sendMessage()">hi</button>
+</body>
+<script>
+// Create WebSocket connection.
+const socket = new WebSocket('ws://localhost:3010');
+
+// Connection opened
+socket.addEventListener('open', function (event) {
+    console.log('connected to server');
+});
+
+// Listen for messages
+socket.addEventListener('message', function (event) {
+    console.log('Message from server ', event.data);
+});
+
+const sendMessage =()=> {
+    socket.send('Hello from client1');
+}
+</script>
+
+
+
+</html>
